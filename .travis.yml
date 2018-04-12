@@ -1,4 +1,7 @@
 language: csharp
+install:
+  - nuget restore BowlingSPAService/BowlingSPAService.sln
+  - nuget restore BowlingSPAWeb/BowlingSPA.sln
 script : 
-  - xbuild /p:Configuration=Release BowlingSPAService/BowlingSPAService.sln 
-  - xbuild /p:Configuration=Release BowlingSPAWeb/BowlingSPA.sln 
+  - msbuild /p:Configuration=Release BowlingSPAService/BowlingSPAService.sln
+  - msbuild /p:Configuration=Release BowlingSPAWeb/BowlingSPA.sln
