@@ -1,1 +1,4 @@
-language: c#
+language: csharp
+script : 
+  - xbuild /p:Configuration=Release BowlingSPAService/BowlingSPAService.sln 
+  - xbuild /p:Configuration=Release BowlingSPAWeb/BowlingSPA.sln 
